@@ -1,0 +1,81 @@
+# SAM 2 Video Segmentation - Complete Python Project
+# All dependencies for Windows 10/11
+
+# Core Deep Learning
+# Note: torch 2.1.2 is no longer available on PyPI
+# Using flexible versions compatible with PyTorch 2.2.0+
+# If you already have PyTorch installed (e.g., 2.9.1), it will use your existing version
+torch>=2.2.0
+torchvision>=0.17.0
+torchaudio>=2.2.0
+
+# SAM 2 and Vision Models
+# Note: segment-anything-2 must be installed from local directory:
+#       pip install -e segment-anything-2/
+#       (It's not available on PyPI)
+timm==0.9.12
+transformers==4.36.2
+huggingface-hub>=0.19.0
+hydra-core>=1.3.2
+iopath>=0.1.10
+
+# Computer Vision & Image Processing
+opencv-python==4.8.1.78
+opencv-contrib-python==4.8.1.78
+numpy>=1.24.0,<2.0.0
+scipy==1.11.4
+scikit-image==0.22.0
+pillow==10.1.0
+imageio==2.33.1
+imageio-ffmpeg==1.4.1
+
+# Video Loading (required by SAM2)
+# Note: decord is preferred but difficult to install on Windows
+# OpenCV fallback is implemented in backend/video_loader.py
+# For Linux/Mac: pip install decord
+# For Windows: OpenCV fallback will be used automatically
+# decord>=0.6.1; platform_system != 'Windows'
+
+# Web Framework & APIs
+fastapi==0.104.1
+uvicorn==0.24.0
+starlette==0.27.0
+pydantic==2.5.0
+
+# Frontend
+streamlit==1.29.0
+streamlit-webrtc==0.47.0
+streamlit-option-menu==0.3.12
+
+# Data Processing
+pandas==2.1.3
+scikit-learn==1.3.2
+
+# Metrics & Evaluation
+torchmetrics==1.2.1
+pycocotools==2.0.7
+albumentations==1.3.1
+
+# Utilities
+python-multipart==0.0.6
+python-dotenv==1.0.0
+tqdm==4.66.1
+pyyaml==6.0.1
+requests==2.31.0
+aiofiles==23.2.1
+
+# Database (optional, for results storage)
+sqlalchemy==2.0.23
+# Note: sqlite3 is part of Python standard library, no need to install
+
+# Logging & Monitoring
+loguru==0.7.2
+
+# Development Tools
+pytest==7.4.3
+black==23.12.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Windows-specific
+pywin32==306; sys_platform == 'win32'
